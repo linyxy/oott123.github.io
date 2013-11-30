@@ -1,0 +1,114 @@
+body{
+	font-family:"微软雅黑","Microsoft Yahei","黑体","宋体";
+	color:#fff;
+	line-height:28px;
+	font-size:16px;
+	margin-left:auto;
+	margin-right:auto;
+	width:720px;
+	background-color:#006ECB;
+}
+logo,main,section,content,menu,tip,footer{
+	display:block;
+}
+a,a:visited{
+	color:#fff;
+	border-bottom:dashed #fff 1px;
+	text-decoration:none;
+}
+a:hover{
+	border-bottom:solid #fff 1px;
+}
+logo{
+	background-image:url('logo-header.png');
+	width:500px;
+	height:70px;
+	margin-top:20px;
+}
+main{
+	margin-top:20px;
+}
+p{
+	margin:5px;
+}
+section{
+	width:557px;
+	float:left;
+}
+content{
+	padding:15px;
+	text-indent:32px;
+	width:530px;
+}
+menu{
+	margin:0;
+	padding:0;
+	width:40px;
+	float:left;
+	margin:0;
+	cursor:pointer;
+	background-image:url('menus.png');
+}
+#menu_works{
+	background-position:-40px 0;
+}
+#menu_favs{
+	background-position:-80px 0;
+}
+#menu_contact{
+	background-position:-120px 0;
+}
+.block{
+	height:360px;
+}
+.gray{
+	background-color:#333;
+}
+.orange{
+	background-color:#FFA200;
+}
+.blue{
+	background-color:#00A0FD;
+}
+.green{
+	background-color:#46BF3F;
+}
+hint{
+	/*border-bottom:1px solid #fff;*/
+}
+tip{
+	position:fixed;
+	left:0;
+	top:0;
+	padding:0 8px;
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity: 0.8;
+	background-color:#fff;
+	color:#000;
+	border:solid 1px #5AB2FF;
+	display:none;
+}
+favcolor{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:100;
+	display:none;
+}
+.colorpicker{
+	z-index:101;
+	border:fixed 1px #fff;
+	padding:0 2px;
+	cursor:pointer;
+}
+footer{
+	text-align:center;
+	width:100%;
+	margin-top:10px;
+	clear:both;
+	font-size:12px;
+	font-family:Consolas;
+}
