@@ -1,13 +1,7 @@
-jQuery.Color.fn.Darker = function(d) {
-	//将颜色变暗的函数=-=
-    var r = this._rgba[0], g = this._rgba[1], b = this._rgba[2], a = this._rgba[3];
-    r = (r-d<0)?0:r-d;
-    g = (g-d<0)?0:g-d;
-    b = (b-d<0)?0:b-d;
-    return jQuery.Color( r, g, b, a );
-};
 
 $(document).ready(function(){
+	//滚动条
+	$('content').rollbar({zIndex:80});
 	//菜单切换
 	$('menu').click(function(){
 		$('*').stop(true,true);	//停止目前动画
@@ -33,20 +27,20 @@ $(document).ready(function(){
 	});
 	//最喜欢的颜色
 	$('.colorpicker').mouseover(function(){
-		$('body').stop(true,true);	//停止目前动画
+		$('*').stop(true,true);	//停止目前动画
 		var oldcolor = $('body').css('background-color');
 		var newcolor = $(this).css('background-color');
-		$('body').animate({backgroundColor:newcolor},500,function(){
-				if(newcolor=='rgb(255, 255, 255)'){
-					$('logo').css('background-color',"#000");
-				}
-			});
+		if(newcolor=='rgb(255, 255, 255)'){
+			$('#logo2').fadeIn(500);
+		}
+		$('body').animate({backgroundColor:newcolor},500);
 		$(this).mouseout(function(){
+			//$('*').stop(false,true);	//停止目前动画
 			//颜色恢复
-				if(newcolor=='rgb(255, 255, 255)'){
-					$('logo').css('background-color',"");
-				}
 			$('body').animate({backgroundColor:oldcolor},500);
+			if(newcolor=='rgb(255, 255, 255)'){
+					$('#logo2').fadeOut(500);
+			}
 		});
 	});
 });
