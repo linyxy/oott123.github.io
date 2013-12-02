@@ -1,7 +1,4 @@
-
 $(document).ready(function(){
-	//滚动条
-	$('content').rollbar({zIndex:80});
 	//菜单切换
 	$('menu').click(function(){
 		$('*').stop(true,true);	//停止目前动画
