@@ -34,11 +34,14 @@ p{
 section{
 	width:557px;
 	float:left;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 content{
 	padding:15px;
 	text-indent:32px;
 	width:530px;
+	overflow: auto;
 }
 menu{
 	margin:0;
@@ -61,8 +64,8 @@ menu{
 .block{
 	height:360px;
 }
-.gray{
-	background-color:#333;
+.pink{
+	background-color:#ED6779;
 }
 .orange{
 	background-color:#FFA200;
