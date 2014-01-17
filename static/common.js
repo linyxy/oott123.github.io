@@ -1,15 +1,16 @@
 $(document).ready(function(){
-	//²Ëµ¥ÇĞ»»
+	//èœå•åˆ‡æ¢
 	$('menu').click(function(){
-		$('*').stop(true,true);	//Í£Ö¹Ä¿Ç°¶¯»­
-		var section = $(this).next();	//µÃµ½ÄÚÈİsection
-		$('section:visible').animate({width:'toggle'},500);	//½«Ä¿Ç°Õ¹¿ªµÄÄÚÈİÕÛµş
-		if($('section:visible')[0]!=$(section)[0]){	//Èç¹ûÄ¿Ç°Õ¹¿ªµÄÄÚÈİ²»ÊÇ½«ÒªÕ¹¿ªµÄÄÚÈİ
-			$(section).animate({width:'toggle'},1000);	//Õ¹¿ª½«ÒªÕ¹¿ªµÄÄÚÈİ
+		$('*').stop(true,true);	//åœæ­¢ç›®å‰åŠ¨ç”»
+		var section = $(this).next();	//å¾—åˆ°å†…å®¹section
+		$('section:visible').animate({width:'toggle'},500);	//å°†ç›®å‰å±•å¼€çš„å†…å®¹æŠ˜å 
+		if($('section:visible')[0]!=$(section)[0]){	//å¦‚æœç›®å‰å±•å¼€çš„å†…å®¹ä¸æ˜¯å°†è¦å±•å¼€çš„å†…å®¹
+			$(section).animate({width:'toggle'},1000);	//å±•å¼€å°†è¦å±•å¼€çš„å†…å®¹
 		}
-		$('body').animate({backgroundColor:$.Color(this,'background-color').Darker(50)},800);	//±³¾°ÑÕÉ«½¥±ä
+		var color = $.Color(this,'background-color').Darker('50');
+		$('body').animate({backgroundColor:color},800);	//èƒŒæ™¯é¢œè‰²æ¸å˜
 	});
-	//hint¸¡ÏÖ
+	//hintæµ®ç°
 	$('hint').mouseover(function(){
 		var offset = $(this).offset();
 		$('tip').css('top',offset.top+20);
@@ -17,14 +18,14 @@ $(document).ready(function(){
 		$('tip').show();
 		$('tip').html($(this).attr('value'));
 	});
-	//hintÏûÊ§
+	//hintæ¶ˆå¤±
 	$('hint').mouseout(function(){
 		$('tip').html('');
 		$('tip').hide();
 	});
-	//×îÏ²»¶µÄÑÕÉ«
+	//æœ€å–œæ¬¢çš„é¢œè‰²
 	$('.colorpicker').mouseover(function(){
-		$('*').stop(true,true);	//Í£Ö¹Ä¿Ç°¶¯»­
+		$('*').stop(true,true);	//åœæ­¢ç›®å‰åŠ¨ç”»
 		var oldcolor = $('body').css('background-color');
 		var newcolor = $(this).css('background-color');
 		if(newcolor=='rgb(255, 255, 255)'){
@@ -32,8 +33,8 @@ $(document).ready(function(){
 		}
 		$('body').animate({backgroundColor:newcolor},500);
 		$(this).mouseout(function(){
-			//$('*').stop(false,true);	//Í£Ö¹Ä¿Ç°¶¯»­
-			//ÑÕÉ«»Ö¸´
+			//$('*').stop(false,true);	//åœæ­¢ç›®å‰åŠ¨ç”»
+			//é¢œè‰²æ¢å¤
 			$('body').animate({backgroundColor:oldcolor},500);
 			if(newcolor=='rgb(255, 255, 255)'){
 					$('#logo2').fadeOut(500);
