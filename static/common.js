@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//retina
 	if(window.devicePixelRatio && window.devicePixelRatio > 1){
-		$('#logo2').attr('src','static/logo-header2-2x.png');
+		$('#logo2').attr('src','static/logo-header2@2x.png');
 	}
 	//菜单切换
 	$('.menu').click(function(){

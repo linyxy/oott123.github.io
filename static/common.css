@@ -1,10 +1,8 @@
 body{
-	font-family:"微软雅黑","Microsoft Yahei","黑体","宋体";
+	font-family:"Hiragino Sans GB","文泉驿微米黑","WenQuanYi Micro Hei","STHeiti","微软雅黑","Microsoft Yahei";
 	color:#fff;
 	line-height:28px;
 	font-size:16px;
-	/*margin-left:auto;
-	margin-right:auto;*/
 	background-color:#006ECB;
 }
 #container{
@@ -123,11 +121,11 @@ only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (min-device-pixel-ratio: 2) {
 	#logo{
-		background-image:url('logo-header-2x.png');
+		background-image:url('logo-header@2x.png');
 		background-size: 500px;
 	}
 	.menu{
-		background-image:url('menus-2x.png');
+		background-image:url('menus@2x.png');
 		background-size: 160px;
 	}
 
